@@ -22,8 +22,8 @@ dotnet --list-sdks
 The output must contain a `10.0` SDK. Then clone and install:
 
 ```powershell
-git clone <repository-url>
-cd WebApiSolutionTemplate
+git clone https://github.com/NaorShmueli/VisualStudioTemplateNet10.git
+cd VisualStudioTemplateNet10
 .\installer\Install-Template.cmd
 ```
 

@@ -18,8 +18,8 @@ App.Metrics, Serilog, Swagger, Docker support, and xUnit tests.
 Clone the repository, close Visual Studio 2026, and run the installer:
 
 ```powershell
-git clone <repository-url>
-cd WebApiSolutionTemplate
+git clone https://github.com/NaorShmueli/VisualStudioTemplateNet10.git
+cd VisualStudioTemplateNet10
 .\installer\Install-Template.cmd
 ```
 
