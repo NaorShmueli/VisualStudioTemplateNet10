@@ -1,0 +1,11 @@
+**/bin
+**/obj
+.git
+.gitignore
+.vs
+.idea
+TestResults
+coverage
+artifacts
+README.md
+ARCHITECTURE.md

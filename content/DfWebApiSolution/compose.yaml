@@ -1,0 +1,14 @@
+name: webapitemplate
+
+services:
+  api:
+    image: webapitemplate:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Authentication__Jwt__Enabled: "false"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

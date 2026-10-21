@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json.schemastore.org/ide.host",
+  "order": 250,
+  "supportsDocker": true
+}

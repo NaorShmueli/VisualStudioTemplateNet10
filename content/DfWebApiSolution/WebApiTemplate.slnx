@@ -1,0 +1,25 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="ARCHITECTURE.md" />
+    <File Path="compose.yaml" />
+    <File Path="Directory.Build.props" />
+    <File Path="Dockerfile" />
+    <File Path="README.md" />
+    <File Path="SolutionItems/Initialize-DevelopmentJwt.ps1" />
+  </Folder>
+  <Project Path="Abstraction/Abstraction.csproj" />
+  <Project Path="BusinessLogic/BusinessLogic.csproj" />
+  <Project Path="DAL/DAL.csproj" />
+  <Project Path="HttpManager/HttpManager.csproj" />
+  <Project Path="Models/Models.csproj" />
+  <Project Path="Validator/Validator.csproj" />
+  <Project Path="WebApiTemplate.UnitTests/WebApiTemplate.UnitTests.csproj" />
+  <Project Path="WebApiTemplate/WebApiTemplate.csproj" />
+</Solution>

@@ -1,0 +1,42 @@
+name: Validate template
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install .NET 10 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Build template source
+        shell: pwsh
+        run: dotnet build .\content\DfWebApiSolution\WebApiTemplate.slnx --configuration Release
+
+      - name: Test template source
+        shell: pwsh
+        run: dotnet test .\content\DfWebApiSolution\WebApiTemplate.slnx --configuration Release --no-build
+
+      - name: Pack and install template
+        shell: pwsh
+        run: |
+          dotnet pack .\DomForge.WebApi.TemplatePack.csproj --configuration Release --output .\artifacts
+          $package = Get-ChildItem .\artifacts\DomForge.WebApi.Template.*.nupkg | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+          dotnet new install $package.FullName --force
+
+      - name: Generate and validate a solution
+        shell: pwsh
+        run: |
+          dotnet new df-webapi --name Smoke.Api --output .\artifacts\smoke
+          dotnet build .\artifacts\smoke\Smoke.Api.slnx --configuration Release
+          dotnet test .\artifacts\smoke\Smoke.Api.slnx --configuration Release --no-build

@@ -1,0 +1,14 @@
+@WebApiTemplate_HostAddress = http://localhost:5080
+
+GET {{WebApiTemplate_HostAddress}}/health/live
+Accept: application/json
+
+###
+
+GET {{WebApiTemplate_HostAddress}}/health/ready
+Accept: application/json
+
+###
+
+GET {{WebApiTemplate_HostAddress}}/metrics
+Accept: text/plain

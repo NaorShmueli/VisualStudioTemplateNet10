@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>DomForge.WebApi.Template</PackageId>
+    <Version>1.0.4</Version>
+    <Authors>DomForgeAI</Authors>
+    <Description>A layered, production-ready ASP.NET Core Web API solution template.</Description>
+    <PackageTags>dotnet-new;templates;aspnetcore;webapi;docker;xunit</PackageTags>
+    <PackageType>Template</PackageType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoWarn>$(NoWarn);NU5110;NU5111</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="content\**\*"
+             Exclude="content\**\bin\**;content\**\obj\**;content\**\Dockerfile"
+             PackagePath="content\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Include="content\DfWebApiSolution\Dockerfile"
+             PackagePath="content\DfWebApiSolution\" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

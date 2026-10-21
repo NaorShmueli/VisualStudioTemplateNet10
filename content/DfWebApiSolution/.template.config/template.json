@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/template",
+  "author": "DomForgeAI",
+  "classifications": [ "Web", "Web API", "ASP.NET Core", "Docker", "xUnit" ],
+  "description": "Creates a layered ASP.NET Core Web API solution with JWT, health checks, metrics, Serilog, Swagger, Docker, and unit tests.",
+  "identity": "DomForge.WebApi.Solution.CSharp.Slnx",
+  "name": "DomForge Layered Web API Solution",
+  "shortName": "df-webapi",
+  "sourceName": "WebApiTemplate",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "solution",
+    "editorTreatAs": "solution"
+  },
+  "primaryOutputs": [
+    { "path": "WebApiTemplate.slnx" }
+  ],
+  "guids": [
+    "07DCB2AF-CB25-49B8-BD41-3162A1FDD3CE"
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".template.config/**/*",
+            "**/[Bb]in/**",
+            "**/[Oo]bj/**",
+            "artifacts/**"
+          ]
+        }
+      ]
+    }
+  ]
+}

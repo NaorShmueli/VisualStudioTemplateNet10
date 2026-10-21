@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+.vs/
+.idea/
+TestResults/
+coverage/
+artifacts/
+*.user
+*.suo
+*.nupkg
+.env
+secrets.json
